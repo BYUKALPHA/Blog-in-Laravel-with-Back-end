@@ -17,6 +17,7 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="/backend/css/skins/_all-skins.min.css">
+
     <link rel="stylesheet" href="/backend/plugins/simplemde/simplemde.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
@@ -43,7 +44,7 @@
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.3.6
         </div>
-        <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+        <strong>Copyright &copy; 2020 <a href="http://alphadotcom.net">Alpha Dotcom</a>.</strong> All rights
         reserved.
     </footer>
 

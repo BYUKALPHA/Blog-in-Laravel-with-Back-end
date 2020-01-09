@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class Postrequest extends Request
+class PostRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,15 +23,22 @@ class Postrequest extends Request
      */
     public function rules()
     {
-        return [
-
-            'title'               =>  'required',
-            'slug'                =>  'required|unique:posts',
-            'body'                =>  'required',
-            'published_at'        =>  'date_format:Y-m-d H:i:s',
+        $rules = [
+            'title'        => 'required',
+            'slug'         => 'required|unique:posts',
+            'body'         => 'required',
+            'published_at' => 'date_format:Y-m-d H:i:s',
             'category_id'  => 'required',
             'image'        => 'mimes:jpg,jpeg,bmp,png',
-
         ];
+
+        switch($this->method()) {
+            case 'PUT':
+            case 'PATCH':
+                $rules['slug'] = 'required|unique:posts,slug,' . $this->route('blog');
+                break;
+        }
+
+        return $rules;
     }
 }
