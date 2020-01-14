@@ -9,7 +9,7 @@ use Intervention\Image\Facades\Image;
 
 class BlogController extends BackendController
 {
-    protected $limit = 10;
+    protected $limit = 3;
     protected $uploadPath;
 
     public function __construct()
@@ -25,21 +25,50 @@ class BlogController extends BackendController
      */
     public function index(Request $request)
     {
-        if(($status = $request->get('status'))&& $status =='trash')
+        $onlyTrashed = FALSE;
+
+        if (($status = $request->get('status')) && $status == 'trash')
         {
-            $posts = Post::onlyTrashed()->with('category', 'author')->latest()->paginate($this->limit);
-            $postCount=Post::onlyTrashed()->count();
+            $posts       = Post::onlyTrashed()->with('category', 'author')->latest()->paginate($this->limit);
+            $postCount   = Post::onlyTrashed()->count();
             $onlyTrashed = TRUE;
+        }
+        elseif ($status == 'published')
+        {
+            $posts       = Post::published()->with('category', 'author')->latest()->paginate($this->limit);
+            $postCount   = Post::published()->count();
+        }
+        elseif ($status == 'scheduled')
+        {
+            $posts       = Post::scheduled()->with('category', 'author')->latest()->paginate($this->limit);
+            $postCount   = Post::scheduled()->count();
+        }
+        elseif ($status == 'draft')
+        {
+            $posts       = Post::draft()->with('category', 'author')->latest()->paginate($this->limit);
+            $postCount   = Post::draft()->count();
         }
         else
         {
-            $posts = Post::with('category', 'author')->latest()->paginate($this->limit);
-            $postCount=Post::count();
-            $onlyTrashed = FALSE;
+            $posts       = Post::with('category', 'author')->latest()->paginate($this->limit);
+            $postCount   = Post::count();
         }
 
+        $statusList = $this->statusList();
 
-      return view("backend.blog.index", compact('posts','postCount','onlyTrashed'));
+        return view("backend.blog.index", compact('posts', 'postCount', 'onlyTrashed', 'statusList'));
+    }
+
+
+    private function statusList()
+    {
+        return [
+            'all'       => Post::count(),
+            'published' => Post::published()->count(),
+            'scheduled' => Post::scheduled()->count(),
+            'draft'     => Post::draft()->count(),
+            'trash'     => Post::onlyTrashed()->count(),
+        ];
     }
 
     /**
