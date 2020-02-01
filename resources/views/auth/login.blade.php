@@ -6,7 +6,7 @@
 
     <div class="login-box">
         <div class="login-logo">
-            <a href="../../index2.html"><b>My</b>Blog</a>
+            <a href="{{ route('blog') }}"><b>AlphaDotcom</b>Blog</a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
