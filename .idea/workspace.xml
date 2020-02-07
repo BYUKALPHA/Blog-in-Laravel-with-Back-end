@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07717249-9570-423e-9775-ff4b18475743" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Blog-in-Laravel-with-Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Blog-in-Laravel-with-Backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/Composers/NavigationComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/Composers/NavigationComposer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/blog/alert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/alert.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/blog/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +178,7 @@
       <workItem from="1580543405415" duration="4735000" />
       <workItem from="1580572585503" duration="9526000" />
       <workItem from="1580997513124" duration="5904000" />
-      <workItem from="1581052840454" duration="1269000" />
+      <workItem from="1581052840454" duration="7957000" />
     </task>
     <servers />
   </component>
