@@ -36,6 +36,18 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
+    public function commentsNumber($label = 'Comment')
+    {
+        $commentsNumber = $this->comments->count();
+
+        return $commentsNumber . " " . str_plural($label, $commentsNumber);
+    }
+
+    public function createComment(array $data)
+    {
+        $this->comments()->create($data);
+    }
+
 
     public function getImageUrlAttribute($value)
     {
