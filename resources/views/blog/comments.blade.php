@@ -26,35 +26,57 @@
 
     <div class="comment-footer padding-10">
         <h3>Leave a comment</h3>
-        <form>
-            <div class="form-group required">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" class="form-control">
+        @if(session('message'))
+            <div class="alert alert-info">
+                {{ session('message') }}
             </div>
-            <div class="form-group required">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" class="form-control">
+        @endif
+
+        {!! Form::open(['route' => ['blog.comments', $post->slug]]) !!}
+        <div class="form-group required {{ $errors->has('author_name') ? 'has-error' : '' }}">
+            <label for="name">Name</label>
+            {!! Form::text('author_name', null, ['class' => 'form-control']) !!}
+            @if($errors->has('author_name'))
+                <span class="help-block">
+                        <strong>{{ $errors->first('author_name') }}</strong>
+                    </span>
+            @endif
+        </div>
+        <div class="form-group required {{ $errors->has('author_email') ? 'has-error' : '' }}">
+            <label for="email">Email</label>
+            {!! Form::text('author_email', null, ['class' => 'form-control']) !!}
+            @if($errors->has('author_email'))
+                <span class="help-block">
+                        <strong>{{ $errors->first('author_email') }}</strong>
+                    </span>
+            @endif
+        </div>
+
+        <div class="form-group">
+            <label for="website">Website</label>
+            {!! Form::text('author_url', null, ['class' => 'form-control']) !!}
+        </div>
+        <div class="form-group required {{ $errors->has('body') ? 'has-error' : '' }}">
+            <label for="comment">Comment</label>
+            {!! Form::textarea('body', null, ['row' => 6, 'class' => 'form-control']) !!}
+            @if($errors->has('body'))
+                <span class="help-block">
+                        <strong>{{ $errors->first('body') }}</strong>
+                    </span>
+            @endif
+        </div>
+        <div class="clearfix">
+            <div class="pull-left">
+                <button type="submit" class="btn btn-lg btn-success">Submit</button>
             </div>
-            <div class="form-group">
-                <label for="website">Website</label>
-                <input type="text" name="website" id="website" class="form-control">
+            <div class="pull-right">
+                <p class="text-muted">
+                    <span class="required">*</span>
+                    <em>Indicates required fields</em>
+                </p>
             </div>
-            <div class="form-group required">
-                <label for="comment">Comment</label>
-                <textarea name="comment" id="comment" rows="6" class="form-control"></textarea>
-            </div>
-            <div class="clearfix">
-                <div class="pull-left">
-                    <button type="submit" class="btn btn-lg btn-success">Submit</button>
-                </div>
-                <div class="pull-right">
-                    <p class="text-muted">
-                        <span class="required">*</span>
-                        <em>Indicates required fields</em>
-                    </p>
-                </div>
-            </div>
-        </form>
+        </div>
+        {!! Form::close() !!}
     </div>
 
 </article>
