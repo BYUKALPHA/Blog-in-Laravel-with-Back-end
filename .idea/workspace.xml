@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="07717249-9570-423e-9775-ff4b18475743" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/blog/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/blog/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/blog/script.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/blog/script.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/main.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +178,9 @@
       <workItem from="1580572585503" duration="9526000" />
       <workItem from="1580997513124" duration="5904000" />
       <workItem from="1581052840454" duration="7957000" />
-      <workItem from="1581137058821" duration="17101000" />
+      <workItem from="1581137058821" duration="17731000" />
+      <workItem from="1581224032531" duration="6305000" />
+      <workItem from="1581488392981" duration="5342000" />
     </task>
     <servers />
   </component>
@@ -184,17 +192,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="420" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1580320941866" />
-    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1580998273281">
+    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1581488424488">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1580998273281" />
+    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581488424488" />
     <state x="186" y="10" key="SettingsEditor" timestamp="1579322469523">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579322469523" />
-    <state x="390" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1580997528978">
+    <state x="390" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1581224037489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1580997528978" />
+    <state x="390" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581224037489" />
   </component>
 </project>
